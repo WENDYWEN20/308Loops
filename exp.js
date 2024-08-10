@@ -60,35 +60,35 @@ next_prime(num)
 
 let csvString = `Index,Mass (kg),Spring 1 (m),Spring 2 (m)\n1,0.00,0.050,0.050\n2,0.49,0.066,0.066\n3,0.98,0.087,0.080\n4,1.47,0.116,0.108\n5,1.96,0.142,0.138\n6,2.45,0.166,0.158\n7,2.94,0.193,0.174\n8,3.43,0.204,0.192\n9,3.92,0.226,0.205\n10,4.41,0.238,0.232`;
 
-// let cell =''
-// // treat cell as string
-// let cell1, cell2, cell3, cell4;
-// let cellCounter =0;
+let cell =''
+// treat cell as string
+let cell1, cell2, cell3, cell4;
+let cellCounter =0;
 
-// for (let i=0; i<csvString.length; i++){
-//     let char=csvString[i];
-//     // if you encounter a ',' separate it, assign what's in cell string into cell1,2,3,4
-//     if (char === ','){
-//         switch (cellCounter) {
-//             case 0: cell1= cell; break;
-//             case 1: cell2= cell; break;
-//             case 2: cell3= cell; break;
-//             case 3: cell4= cell; break;
-//         }
-//     cell = '';
-//     cellCounter++;
-//     }
-//     // when getting the end of the row, \n, console.log all 4 cells, change cellCounter to zero again
-//     else if (char === '\n'){
-//         cell4=cell;
-//         console.log(cell1, cell2, cell3, cell4);
-//         cell = '';
-//         cellCounter =0;}
-//         else{cell += char;} 
-//         //this line runs the first to have cell be 'Index', then meet a ',' cellCounter =0, cell1='Index', repeat, cellCounter change from 0,1,2,3. cell becomes an empty local string again.
-//     }
-// // For the last row, there would be no /n, thus need to write a new line for the last row. As long the loop exit from the above code, cell will be an empty 
-// if (cell) {
-//     cell4 = cell;
-//     console.log(cell1, cell2, cell3, cell4);
-// }
+for (let i=0; i<csvString.length; i++){
+    let char=csvString[i];
+    // if you encounter a ',' separate it, assign what's in cell string into cell1,2,3,4
+    if (char === ','){
+        switch (cellCounter) {
+            case 0: cell1= cell; break;
+            case 1: cell2= cell; break;
+            case 2: cell3= cell; break;
+            case 3: cell4= cell; break;
+        }
+    cell = '';
+    cellCounter++;
+    }
+    // when getting the end of the row, \n, console.log all 4 cells, change cellCounter to zero again
+    else if (char === '\n'){
+        cell4=cell;
+        console.log(cell1, cell2, cell3, cell4);
+        cell = '';
+        cellCounter =0;}
+        else{cell += char;} 
+        //this line runs the first to have cell be 'Index', then meet a ',' cellCounter =0, cell1='Index', repeat, cellCounter change from 0,1,2,3. cell becomes an empty local string again.
+    }
+// For the last row, there would be no /n, thus need to write a new line for the last row. As long the loop exit from the above code, cell will be an empty 
+if (cell) {
+    cell4 = cell;
+    console.log(cell1, cell2, cell3, cell4);
+}
