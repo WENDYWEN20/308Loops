@@ -79,6 +79,7 @@ for (let i=0; i<csvString.length; i++){
     cellCounter++;
     }
     // when getting the end of the row, \n, console.log all 4 cells, change cellCounter to zero again
+    //and console log out each cell again
     else if (char === '\n'){
         cell4=cell;
         console.log(cell1, cell2, cell3, cell4);
